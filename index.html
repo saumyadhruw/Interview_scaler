@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interview_Portal</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href='https://fonts.googleapis.com/css2?family=Lora' rel="stylesheet" type="text/css">
+	<script src="js/script.js"></script> 
+</head>
+<body>
+<header>
+	<nav id="head-nav" class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+			<div class="navbar-brand">
+			<a href="index.html"><h1>Interview Creation Portal</h1></a>
+		</div>
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	<div id="collapsable-nav" class="collapse navbar-collapse">
+		<ul id="nav-list" class="nav navbar-nav navbar-right">
+			<li id="form_icon"> 
+				<a href="#">
+				<button class="glyphicon glyphicon-home" onclick="ShowForm()"></button><br class="hidden-xs">Home</a>
+			</li>
+			<li id="list"> 
+			<a href="#">
+			<button class="glyphicon glyphicon-list" onclick="ShowList()"></button><br class="hidden-xs">List</a>
+			</li>
+			<li id="sched"> 
+			<a href="#">
+			<button class="glyphicon glyphicon-calendar" onclick="ShowSchedule()"></button><br class="hidden-xs">Schedule</a>
+			</li>
+		</ul>
+	</div>
+	</div>
+	</nav>
+	</header>
+	<center>
+		<div id="form">
+	<div class="rectangle"><h1>Set Schedule</h1>
+		<br>
+	<label for="P_names">Participant:</label>
+	
+	<select name="Participant-names" id="P_names">
+    <option value="J.Varun Iyer">J.Varun Iyer</option>
+  	<option value="Sarthak Patel">Sarthak Patel</option>
+  	<option value="Siddhart Mishra">Siddhart Mishra</option>
+  	<option value="Samidha Thawait">Samidha Thawait</option>
+	<option value="Sana Shergil">Sana Shergil</option>
+	<option value="Ramya Singh">Ramya Singh</option>
+	</select>
+<br>
+	<table id="tables">
+		<tr>
+  		<th>Start Time:</th>
+  	<td>
+	<input type="date" id="sdate" oninput="document.getElementById('edate').value=document.getElementById('sdate').value;">
+	<input type="time" id="stime" name="stime">
+  	</td>
+	</tr>
+  	<br>
+	<tr>
+  	<th>End Time:</th>
+  	<td>
+	<input type="date" id="edate" name="edate" oninput="dateValidate()">
+	<input type="time" id="etime" name="etime" oninput="timeValidate()">
+  	</td>
+	</tr>
+	</table>
+	<br>
+	<button class="btn">Add Interview</button>
+	</div>
+</div>
+</center>
+
+<div style="overflow-x:auto;"></div>
+	<div id="Schedule_div">
+		<table class="tab">
+			<tr>
+			  <th>Interviewee's Name</th>
+			  <th>Participant Name</th>
+			  <th>Start Date</th>
+			  <th>Start time</th>
+			  <th>End Date</th>
+			  <th>End time</th>
+			</tr>
+			<tr>
+				<td>Saumya Dhruw</td>
+				<td>J.varun Iyer</td>
+				<td>16-10-22</td>
+				<td>10:00 AM</td>
+				<td>16-10-22</td>
+				<td>11:00 AM</td>
+			</tr>
+			<tr>
+				<td>Aditya Sharma</td>
+				<td>Sarthak Patel</td>
+				<td>16-10-22</td>
+				<td>11:15 AM</td>
+				<td>16-10-22</td>
+				<td>12:15 PM</td>
+			</tr>
+			<tr>
+				<td>Meenal Singh</td>
+				<td>Sargun Mehta</td>
+				<td>16-10-22</td>
+				<td>1:15 PM</td>
+				<td>16-10-22</td>
+				<td>2:15 PM</td>
+			</tr>
+		</table>
+	</div>
+	<div id="list_div">
+			<table class="tab1">
+				<tr>
+				  <th id="few">Name of the Participant :</th>
+				</tr>
+					<tr><td>J.Varun Iyer</td></tr>
+					<tr><td>Sarthak Patel</td></tr>
+					<tr><td>Siddhart Mishra</td></tr>
+					<tr><td>Samidha Thawait</td></tr>
+					<tr><td>Sana Shergil</td></tr>
+					<tr><td>Ramya Singh</td></tr>
+			</table>
+	</div>
+<!-- <script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> -->
+
+</body>
+</html>
